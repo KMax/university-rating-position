@@ -209,7 +209,7 @@ def remove_matching(left: pd.DataFrame, right: pd.DataFrame, match_on) -> pd.Dat
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('score', type=int)
-    parser.add_argument('--refresh', type=bool, default=False)
+    parser.add_argument('--refresh', action='store_true')
     args = parser.parse_args()
 
     if args.refresh or not Path("./inputs").exists():
